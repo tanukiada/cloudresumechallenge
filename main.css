@@ -1,0 +1,24 @@
+.wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 200px 200px 200px;
+	grid-template-areas:
+	"sidebar content content"
+	"....... content content"
+	"footer  footer  footer"
+}
+
+.sidebar {
+	grid-area: sidebar;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.content {
+	grid-area: content;
+}
+
+.footer {
+	grid-area: footer;
+}
