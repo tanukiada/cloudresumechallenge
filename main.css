@@ -1,11 +1,16 @@
+body {
+	background-color: #9ba59c;
+	color: #333;
+}
+
 .wrapper {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: 200px 200px 200px;
+	grid-template-columns: 200px 500px;
 	grid-template-areas:
-	"sidebar content content"
-	"....... content content"
-	"footer  footer  footer"
+	"sidebar content"
+	"....... content"
+	"footer  footer";
 }
 
 .sidebar {
@@ -13,12 +18,52 @@
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	a:link {
+		color: #333;
+	}
+	a:visited {
+		color: #333;
+	}
+	a:hover {
+		color: #000;
+		text-decoration: underline;
+	}
+	a:active {
+		color: #333;
+	}
 }
 
 .content {
 	grid-area: content;
 }
 
+.skills {
+	display: grid;
+	grid-gap: 100px;
+	grid-template-columns: 50px	50px;
+	grid-template-areas: "hard soft";
+}
+
+.skills > div {
+	width: 100px;
+}
+
+.hard {
+	grid-area: hard;
+}
+
+.soft {
+	grid-area: soft;
+}
+
 .footer {
 	grid-area: footer;
+}
+
+.sidebar > h1 {
+	color: #F5A9B8;
+}
+
+.sidebar > h2 {
+	color: #5BCEFA;
 }
